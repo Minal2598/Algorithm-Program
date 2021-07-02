@@ -2,10 +2,11 @@ package com.algorithm.programs;
 
 import java.util.Arrays;
 public class Utility {
+	       
 	
+	        // INSERTIONSORT
 	
 		/**
-		 * binaryIntArray - integer array to sort
 		 * sorted integer array in descending order
 		 */
 		public int[] insertionSortDescending(int[] binaryIntArray) {
@@ -47,7 +48,7 @@ public class Utility {
 		 * binaryStringArray - input string array to sort
 		 * array in ascending order
 		 */
-		public String[] insertionSortAscending(String[] binaryStringArray) {
+			public String[] insertionSortAscending(String[] binaryStringArray) {
 			
 			for(int i = 1; i < binaryStringArray.length; i++) {
 				String key = binaryStringArray[i];
@@ -61,6 +62,23 @@ public class Utility {
 			
 			return binaryStringArray;
 		}
+		
+		         //BUBBLESORT
+		
+			public int[] bubbleSortAscending(int[] binaryIntArray) {
+
+			 int n = binaryIntArray.length;
+				for(int i = 0; i < n; i++) {
+					for(int j = 0; j < (n - 1 - i); j++) {
+						if(binaryIntArray[j] > binaryIntArray[j+1]) {
+							int temp = binaryIntArray[j];
+							binaryIntArray[j] = binaryIntArray[j+1];
+							binaryIntArray[j+1] = temp;
+						}
+					}
+				}
+				return binaryIntArray;
+		 }
 		
 
 
